@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alluri Shashidhar Reddy</title>
+  <meta name="description" content="Alluri Shashidhar Reddy's personal portfolio - Game & Chatbot Developer">
+  <meta name="keywords" content="Alluri Shashidhar Reddy, Shashidhar, chatbot, game development, Reg 2362065">
+  <meta name="author" content="Alluri Shashidhar Reddy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset ===== */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+
+    body {
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 0;
+      background: rgba(0,0,0,0.85);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .navbar a::after {
+      content:'';
+      display:block;
+      height:3px;
+      width:0;
+      background:#ff00ff;
+      transition:0.3s;
+      border-radius:2px;
+      position:absolute;
+      bottom:-5px;
+      left:0;
+    }
+
+    .navbar a:hover::after { width:100%; }
+    .navbar a:hover { color: #ff00ff; }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      color: #ff00ff;
+      text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+      margin-bottom: 15px;
+    }
+
+    .hero .role {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    .hero .introduction p {
+      max-width: 750px;
+      margin: 12px auto;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    /* ===== Neon Button ===== */
+    .neon-btn {
+      padding: 14px 35px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ff00ff;
+      background: none;
+      border: 2px solid #ff00ff;
+      border-radius: 12px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: 0.3s;
+      margin-top: 25px;
+      box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    }
+
+    .neon-btn:hover {
+      box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 50px #ff00ff;
+      transform: scale(1.05);
+    }
+
+    /* ===== Social Media ===== */
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .social-media img {
+      width: 50px;
+      transition: 0.3s;
+      filter: drop-shadow(0 0 10px #ff00ff);
+    }
+
+    .social-media img:hover {
+      transform: scale(1.3) rotate(10deg);
+      filter: drop-shadow(0 0 20px #ff00ff);
+    }
+
+    /* ===== Projects ===== */
+    .projects {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .projects .box {
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+      border: 2px solid #ff00ff;
+      border-radius: 15px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #ff00ff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .projects .box::before {
+      content:'';
+      position:absolute;
+      top:-50%;
+      left:-50%;
+      width:200%;
+      height:200%;
+      background: linear-gradient(45deg, transparent, rgba(255,0,255,0.3), transparent);
+      animation: rotate 4s linear infinite;
+    }
+
+    .projects .box img {
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .projects .box span {
+      display: block;
+      margin-top: 15px;
+      font-weight: 700;
+      color: #ff00ff;
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+    }
+
+    .projects .box:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      background-color: #111;
+      color: #888;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      0% { opacity:0; transform:translateY(20px); }
+      100% { opacity:1; transform:translateY(0); }
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width:768px){
+      .projects { flex-direction: column; align-items:center; }
+      .navbar { flex-direction: column; gap:20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="projects.html">Projects</a>
+      <a href="https://www.instagram.com/alluri_shashidhar_reddy/" target="_blank">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <h1>Alluri Shashidhar Reddy</h1>
+      <p class="role">Reg No: 2362065 | Programmer | Game Developer | Chatbot Creator</p>
+      <div class="introduction">
+        <p>Hello! I'm Alluri Shashidhar Reddy, a passionate programmer and creator.</p>
+        <p>I specialize in game development and chatbot solutions that are interactive and intelligent.</p>
+        <p>Check out my projects, and feel free to connect for collaborations or inquiries.</p>
+      </div>
+      <!-- Contact Me Button linking to Instagram -->
+      <a href="https://www.instagram.com/alluri_shashidhar_reddy/" target="_blank">
+        <button class="neon-btn">Contact Me</button>
+      </a>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-media">
+      <a href="https://www.instagram.com/alluri_shashidhar_reddy/" target="_blank"><img src="instalogo.jpg" alt="Instagram"></a>
+      <a href="https://www.youtube.com/" target="_blank"><img src="ytlogo.png" alt="YouTube"></a>
+      <a href="https://www.fiverr.com/" target="_blank"><img src="fivverlogo.png" alt="Fiverr"></a>
+      <a href="https://github.com/" target="_blank"><img src="github.png" alt="GitHub"></
